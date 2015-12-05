@@ -29,6 +29,17 @@ a.配置权限
 
 b.配置Receiver
 
+    <!-- push应用定义消息receiver声明 -->
+    <receiver android:name="com.chanricle.h5plus.push.baidu.BaiduPushMessageReceiver">
+        <intent-filter>
+            <!-- 接收push消息 -->
+            <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+            <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+            <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+            <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+        </intent-filter>
+    </receiver>
+
     <!-- Baidu push service start -->
     <!-- 用于接收系统消息以保证PushService正常运行 -->
     <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
