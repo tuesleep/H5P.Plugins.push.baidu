@@ -9,7 +9,9 @@ DCloud H5+ 对于百度推送的拓展插件
 
 ##### 1.导入百度云推送的jar包(`pushservice-4.4.0.71`)和.so文件(`libbdpush_V2_4.so`)，.so文件，因为HBuilder-Hello项目libs目录里面有三个.so文件夹,分别是`armeabi`和`armeabi-v7a`和`x86`，所以百度云推送提供的.so文件，对应目录的三个都要拷贝进来。
 
-##### 2.AndroidManifest.xml文件中的配置
+##### 2.导入本项目Android/h5plugin-baidu-push.jar包。
+
+##### 3.AndroidManifest.xml文件中的配置
 a.配置权限
 
     <!-- Baidu Push service 运行需要的权限 -->
@@ -66,17 +68,17 @@ b.配置Receiver
         android:exported="true" />
     <!-- Baidu push service end -->
 
-##### 3.HBuilder-Hello工程的assets/data/properties.xml中添加一行feature配置
+##### 4.HBuilder-Hello工程的assets/data/properties.xml中添加一行feature配置
 
     <feature name="PluginBaiduPush" value="com.chanricle.h5plus.push.baidu.BaiduPushManager" />
     
-##### 4.在应用的manifest.json文件中还需要添加扩展插件的应用使用权限，在permissions中添加
+##### 5.在应用的manifest.json文件中还需要添加扩展插件的应用使用权限，在permissions中添加
 
     "PluginBaiduPush": {
         "description": "百度云推送DCloud扩展插件"
     }
 
-##### 5.在应用中引入plugins.push.baidu.js，即可调用方法获取百度云推送绑定成功后的数据
+##### 6.在应用中引入plugins.push.baidu.js，即可调用方法获取百度云推送绑定成功后的数据
 
     document.addEventListener('plusready', function() {
         plus.PluginBaiduPush.startWork('S9NPBYVRYGd8O0AlFkPF2ZTI', function(args) {
