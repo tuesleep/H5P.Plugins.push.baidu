@@ -5,7 +5,7 @@ DCloud H5+ 对于百度推送的拓展插件
 
 #### 安装方法
 
-##### 0.首先下载[离线打包的SDK](http://ask.dcloud.net.cn/article/103)，将用到HBuilder-Hello这个项目。
+##### 0.首先下载[离线打包的SDK](http://ask.dcloud.net.cn/article/103)，将用到HBuilder-Hello这个项目。`附上了版本4.5.6.88的百度云推送官方libs和demo等文件，如果你的百度云推送版本过低或过高，可能会出现兼容性问题，请Issues`。
 
 ##### 1.导入百度云推送的jar包(`pushservice-4.4.0.71`)和.so文件(`libbdpush_V2_4.so`)，.so文件，因为HBuilder-Hello项目libs目录里面有三个.so文件夹,分别是`armeabi`和`armeabi-v7a`和`x86`，所以百度云推送提供的.so文件，对应目录的三个都要拷贝进来。
 
