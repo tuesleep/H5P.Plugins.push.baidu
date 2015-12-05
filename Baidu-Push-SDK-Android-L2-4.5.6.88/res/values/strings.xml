@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login">登录</string>
+    <string name="text_btn_init">百度账号绑定</string>
+    <string name="text_btn_init1">更换百度账号</string>
+    <string name="text_btn_on_push">打开Push</string>
+    <string name="text_btn_off_push">关闭Push</string>
+    <string name="log_tip">日志：</string>
+    <string name="clear_log">清除日志</string>
+    <string name="text_btn_rich">富媒体消息</string>
+    <string name="text_btn_initAK">无账号绑定</string>
+    <string name="text_btn_setTags">设置标签</string>
+    <string name="text_btn_delTags">删除标签</string>
+    <string name="text_btn_senior">高级功能</string>
+    <string name="text_btn_set">设置</string>
+    <string name="text_media_title">富媒体消息列表</string>
+    <string name="media">Rich Media</string>
+    <string name="custom_text_hint">用户自定义行为打开的Activity</string>
+    <string name="tags_hint">请输入多个标签，以英文逗号隔开</string>
+    <string name="text_btn_aidl">轻应用AIDL</string>
+    <string name="text_btn_off_lightapp">关闭所有轻消息</string>
+    <string name="text_btn_off_app_msg">加入黑名单</string>
+    <string name="text_btn_unread_only_msg">只获取未读消息</string>
+    <string name="text_btn_on_shortcut">生成快捷图标</string>
+    <string name="app_name">PushDemo</string>
+    <string name="text_btn_showTags">列举标签</string>
+    <string name="text_btn_unbind">解绑</string>
+    <string name="text_btn_setunDisturb">免打扰时段</string>
+    <string name="text_toast">设置成功，免打扰时段为：\n%1$s - %2$s</string>
+    <string name="text_about">百度Push Android SDK 4.5.5\n\n更新时间:2015年10月30日\nChange Log：\n适配Android 6.0。\n增加arm64-v8a、armeabi-v7a和x86的so文件。\n启动模式重构，降低启动内存消耗。\n调试模式判断优化，降低CPU消耗。\n消息分发模式全面优化，提升分发效率。\n修复部分机型上超长时间工作引发的OutofMemory问题和ANR问题。</string>
+    <string name="text_help">百度hi官方技术讨论群：1405944\nQQ群：324533810（可加）\n云推送微信公众账号：云推送（微信号：baidu-push）\n</string>
+
+</resources>
