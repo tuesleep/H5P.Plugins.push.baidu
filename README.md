@@ -12,6 +12,7 @@ DCloud H5+ 对于百度推送的拓展插件
 ##### 2.AndroidManifest.xml文件中的配置
 a.配置权限
 
+    <!-- Baidu Push service 运行需要的权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
