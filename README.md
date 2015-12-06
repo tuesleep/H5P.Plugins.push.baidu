@@ -5,11 +5,19 @@ DCloud H5+ 对于百度推送的拓展插件
 
 #### 安装方法
 
+---
+
 ##### 0.首先下载[离线打包的SDK](http://ask.dcloud.net.cn/article/103)，将用到HBuilder-Hello这个项目。`附上了版本4.5.6.88的百度云推送官方libs和demo等文件，如果你的百度云推送版本过低或过高，可能会出现兼容性问题，请Issues`。
+
+---
 
 ##### 1.导入百度云推送的jar包(`pushservice-4.4.0.71`)和.so文件(`libbdpush_V2_4.so`)，.so文件，因为HBuilder-Hello项目libs目录里面有三个.so文件夹,分别是`armeabi`和`armeabi-v7a`和`x86`，所以百度云推送提供的.so文件，对应目录的三个都要拷贝进来。
 
+---
+
 ##### 2.导入本项目Android/h5plugin-baidu-push.jar包。
+
+---
 
 ##### 3.AndroidManifest.xml文件中的配置
 a.配置权限
@@ -83,11 +91,15 @@ b.配置Receiver
 <!-- Baidu push service end -->
 ```
 
+---
+
 ##### 4.HBuilder-Hello工程的assets/data/properties.xml中添加一行feature配置
 
 ```xml
 <feature name="PluginBaiduPush" value="com.chanricle.h5plus.push.baidu.BaiduPushManager" />
 ```    
+
+---
 
 ##### 5.在应用的manifest.json文件中还需要添加扩展插件的应用使用权限，在permissions中添加
 
@@ -96,6 +108,8 @@ b.配置Receiver
     "description": "百度云推送DCloud扩展插件"
 }
 ```
+
+---
 
 ##### 6.在应用中引入plugins.push.baidu.js，即可调用方法获取百度云推送绑定成功后的数据
 
