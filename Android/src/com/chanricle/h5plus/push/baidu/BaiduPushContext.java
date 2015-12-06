@@ -24,5 +24,11 @@ public class BaiduPushContext {
 	public String pushOnBindCallBackId;
 	
 	/** 回调native时的IWebview对象 */
-	public IWebview iWebview;
+	public IWebview pushOnBindWebview;
+	
+	/** 百度云推送消息到达时，点击的操作的回调id */
+	public String pushMessageReceiveCallBackId;
+	
+	/** 回调native时的IWebview对象 */
+	public IWebview pushMessageReceiveWebview;
 }

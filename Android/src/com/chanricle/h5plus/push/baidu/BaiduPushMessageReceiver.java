@@ -8,7 +8,9 @@ import org.json.JSONObject;
 import com.baidu.android.pushservice.PushMessageReceiver;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
+import io.dcloud.PandoraEntry;
 import io.dcloud.common.util.JSUtil;
 
 /**
@@ -81,7 +83,7 @@ public class BaiduPushMessageReceiver extends PushMessageReceiver {
 		}
         
         // 获取用来发送推送的 userId 和 channelId ，并回调PluginBridge
-        JSUtil.execCallback(pushContext.iWebview, pushContext.pushOnBindCallBackId, argsJSONObject, JSUtil.OK, true);
+        JSUtil.execCallback(pushContext.pushOnBindWebview, pushContext.pushOnBindCallBackId, argsJSONObject, JSUtil.OK, true);
     }
 
     /**
@@ -122,6 +124,29 @@ public class BaiduPushMessageReceiver extends PushMessageReceiver {
                 + description + "\" customContent=" + customContentString;
         Log.d(TAG, notifyString);
         
+        // 启动应用主界面
+        Intent intent = new Intent();
+        intent.setClass(context.getApplicationContext(), PandoraEntry.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.getApplicationContext().startActivity(intent);
+        
+        JSONObject callbackJSONObject = new JSONObject();
+        
+        try {
+	        callbackJSONObject.put("title", title);
+	        callbackJSONObject.put("description", description);
+	        callbackJSONObject.put("customContent", customContentString);
+	    } catch (JSONException e) {
+			e.printStackTrace();
+		}
+        
+        // 如果有绑定消息到达时的回调，则进行回调
+        BaiduPushContext pushContext = BaiduPushContext.getInstance();
+        
+        if (pushContext.pushMessageReceiveCallBackId != null) {
+        	JSUtil.execCallback(pushContext.pushMessageReceiveWebview, pushContext.pushMessageReceiveCallBackId,
+        			callbackJSONObject, JSUtil.OK, true);
+        }
     }
 
     /**
