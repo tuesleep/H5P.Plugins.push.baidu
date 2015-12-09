@@ -109,6 +109,8 @@ b.配置Receiver
 }
 ```
 
+`注意：制作更新包的时候，会因为这个问题导致失败。提示：安装更新失败，HTML5+ runtime不存在pluginbaidupush权限。`
+
 -
 
 ##### 6.在应用中引入plugins.push.baidu.js，即可调用方法获取百度云推送绑定成功后的数据
