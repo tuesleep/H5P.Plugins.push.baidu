@@ -132,4 +132,4 @@ document.addEventListener('plusready', function() {
 });
 ```
 
-参考:http://chanricle.com/2015-12-05-Develop-DCloud-baidu-push-plugin/
+参考: https://leonardo.pub/mess/2015/12/05/Develop-DCloud-baidu-push-plugin.html
